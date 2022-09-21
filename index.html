@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript</title>
+        <link rel="stylesheet" href="src/style.css">
+        <script defer type="text/javascript" src="src/script.js"></script>
+    </head>
+    <body>
+        <h1>Hello Universe!</h1>
+        <p id="parag"></p>
+        <div id="myName"></div>
+        <input type="text" id="myNameInput" />
+        <button onclick="updateTheName()" id="myBtn">Click to Update your Name</button>
+        <h4>Simple calculator (works with strings)</h4>
+        <div class="container">
+            <input type="text" id="myFirstNumber">
+            <button id="plusBtn" onclick="makeSum()">+</button>
+            <button id="timesBtn" onclick="makeTimes()">*</button>
+            <input type="text" id="mySecondNumber">
+            <span>=</span>
+            <div id="result"></div>
+        </div>
+        <h1>Calculator</h1>
+        <h6>Click AC to remove easter eggs ;)</h6>
+        <div class="calculator">
+            <div class="screen">0</div>
+            <div class="buttons">
+                <button class="btnNumber" id="AC" data-action="clear">AC</button>
+                <button class="btnNumber" id="one">1</button>
+                <button class="btnNumber" id="two">2</button>
+                <button class="btnNumber" id="three">3</button>
+                <button class="btnNumber" id="plus" data-action="add">+</button>
+                <button class="btnNumber" id="four">4</button>
+                <button class="btnNumber" id="five">5</button>
+                <button class="btnNumber" id="six">6</button>
+                <button class="btnNumber" id="minus" data-action="subtract">-</button>
+                <button class="btnNumber" id="seven">7</button>
+                <button class="btnNumber" id="eight">8</button>
+                <button class="btnNumber" id="nine">9</button>
+                <button class="btnNumber" id="times" data-action="multiply">&times;</button>
+                <button class="btnNumber" id="divide" data-action="divide">&#247;</button>
+                <button class="btnNumber" id="zero">0</button>
+                <button class="btnNumber" id="decimal" data-action="decimal">.</button>
+                <button class="btnNumber" id="equal" data-action="calculate">=</button>
+            </div>
+        </div>
+    </body>
+</html>

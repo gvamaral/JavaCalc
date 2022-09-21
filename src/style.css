@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2A2B2E;
+    color: #ACEB98;
+    margin: 20px;
+}
+@font-face {
+    font-family: digital;
+    src: url(../fonts/digital-7.ttf);
+}
+#myName {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    border: 1px solid #87FF65;
+    margin-bottom: 10px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+button, input, span {
+    margin: 5px;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-around;
+    border: 1px solid #87FF65;
+    height: 475px;
+    width: 320px;
+}
+/* .calculator:hover {
+    transform: rotate(180deg);
+    transition: 2s;
+} */
+.screen {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 40px;
+    font-family: digital;
+    border: 1px solid #87FF65;
+    padding: 0 5px;
+    margin: 10px;
+    width: 290px;
+    height: 50px;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #87FF65;
+    margin: 10px;
+    padding: 2px;
+    width: 296px;
+    height: 385px;
+    gap: 2px;
+}
+
+.btnNumber {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    background-color: #3c3e45;
+    color: #ACEB98;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: Inter,sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s,-webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 58px;
+    height: 75px;
+}
+#AC {
+    width: 296px;
+}
+
+.btnNumber:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
