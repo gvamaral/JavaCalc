@@ -114,13 +114,6 @@ keys.addEventListener('click', e => {
         const keyContent = key.textContent
         const displayedNum = display.textContent
 
-        if(display.textContent === "58008") {
-            calculator.style.transition = "all 2s";
-            calculator.style.transform = "rotate(180deg)";
-        }
-        else {
-            calculator.style.transform = ''
-        };
         function calculate(n1, operator, n2) {
             let result = ''
             if(operator === 'add'){
@@ -219,26 +212,27 @@ keys.addEventListener('click', e => {
                     firstValue = displayedNum
                     secondValue = calculator.dataset.modValue
                 }
-                if (calculate(firstValue, operator, secondValue) == 666){
-                    display.style.backgroundImage = 'url(images/flame.gif)';
-                    display.style.backgroundSize = "cover";
-                    display.style.backgroundPosition = "center";
-                    display.textContent = calculate(firstValue, operator, secondValue)
-                }
                 else {
                     display.textContent = calculate(firstValue, operator, secondValue)
                 }
             }
 
-            if(display.textContent === "58008") {
-                calculator.style.transition = "all 2s";
-                calculator.style.transform = "rotate(180deg)";
-            }
-            else {
-                calculator.style.transform = ''
-            };
             calculator.dataset.modValue = secondValue
             calculator.dataset.previousKey = 'calculate'
         }
+        
+        if (display.textContent === "666" ) {
+            display.style.backgroundImage = 'url(images/flame.gif)';
+            display.style.backgroundSize = "cover";
+            display.style.backgroundPosition = "center";
+        } 
+        else if(display.textContent === "58008") {
+            calculator.style.transition = "all 2s";
+            calculator.style.transform = "rotate(180deg)";
+        }
+        else {
+            calculator.style.transform = '';
+            display.style.backgroundImage = ''
+        };
     }
    })
