@@ -1,8 +1,8 @@
 // var myVar = {
-//     boolean:true, 
-//     number:839, 
-//     string:"My name is not know by humanity", 
-//     object:{firstName:"Justin", value:50}, 
+//     boolean:true,
+//     number:839,
+//     string:"My name is not know by humanity",
+//     object:{firstName:"Justin", value:50},
 //     myFunction: function(yourName){
 //         var yourName = prompt('Tell me your name?');
 //         return alert(`Created, Master ${yourName}!`);
@@ -152,7 +152,7 @@ keys.addEventListener('click', e => {
             const firstValue = calculator.dataset.firstValue
             const operator = calculator.dataset.operator
             const secondValue = displayedNum
-            
+
             if (firstValue && operator && calculator.dataset.previousKey !== 'operator' && calculator.dataset.previousKey !== 'calculate') {
                 const calcValue = calculate(firstValue, operator, secondValue)
                 display.textContent = calcValue
@@ -175,7 +175,7 @@ keys.addEventListener('click', e => {
             }
             calculator.dataset.previousKey = 'decimal'
         }
-          
+
         if (action === 'clear') {
             console.log('clear key!')
             if (key.textContent === 'AC') {
@@ -201,7 +201,7 @@ keys.addEventListener('click', e => {
             const clearButton = calculator.querySelector('[data-action=clear]')
             clearButton.textContent = 'CE'
         }
-          
+
         if (action === 'calculate') {
             console.log('equal key!')
             let firstValue = calculator.dataset.firstValue
@@ -211,6 +211,7 @@ keys.addEventListener('click', e => {
                 if (calculator.dataset.previousKey == 'calculate'){
                     firstValue = displayedNum
                     secondValue = calculator.dataset.modValue
+                    display.textContent = calculate(firstValue, operator, secondValue)
                 }
                 else {
                     display.textContent = calculate(firstValue, operator, secondValue)
