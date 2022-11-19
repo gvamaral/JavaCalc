@@ -53,7 +53,7 @@ function makeSum() {
     var secondNumber = numberSecondInput.value;
     var divResultSum = +firstNumber + +secondNumber;
     var divResultString = firstNumber + secondNumber;
-    
+
     console.log(divResultString)
     if (+firstNumber && +secondNumber) {
         divResult.innerHTML = divResultSum
@@ -188,10 +188,14 @@ keys.addEventListener('click', e => {
                 key.textContent = 'AC'
             }
             if (display.textContent !== '58008'){
-                calculator.style.transform = ''
+                calculator.style.transform = '';
             }
             if (display.textContent !== '666'){
-                display.style.backgroundImage = ''
+                display.style.backgroundImage = '';
+            }
+            if (display.textContent !== '1134'){
+                display.style.transform = '';
+                display.style.backgroundImage = '';
             }
             display.textContent = 0
             calculator.dataset.previousKey = 'clear'
@@ -221,13 +225,20 @@ keys.addEventListener('click', e => {
             calculator.dataset.modValue = secondValue
             calculator.dataset.previousKey = 'calculate'
         }
-        
+
         if (display.textContent === "666" ) {
             display.style.backgroundImage = 'url(images/flame.gif)';
             display.style.backgroundSize = "cover";
             display.style.backgroundPosition = "center";
-        } 
+        }
         else if(display.textContent === "58008") {
+            calculator.style.transition = "all 2s";
+            calculator.style.transform = "rotate(180deg)";
+        }
+        else if(display.textContent === "1134") {
+            display.style.backgroundImage = 'url(images/flame-flipped.gif)';
+            display.style.backgroundSize = "cover";
+            display.style.backgroundPosition = "center";
             calculator.style.transition = "all 2s";
             calculator.style.transform = "rotate(180deg)";
         }
